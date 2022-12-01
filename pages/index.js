@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <div>
       {/* Loading Wheel */}
-      <div className={`double-up fixed w-screen h-screen ${Loading ? 'flex' : 'hidden'} justify-center items-center bg-[#ffffff3b]`} style={{ display: !Loading && "none" }}></div>
+      <div className={`double-up fixed w-screen h-screen ${Loading ? 'flex' : 'hidden'} justify-center items-center bg-[#ffffff3b]`}></div>
 
       <NavBar setLoading={setLoading} />
 

@@ -1,11 +1,19 @@
 import Link from "next/link"
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/initFirebase";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 
 export default () => {
+
+    useEffect(() => {
+        if (localStorage.getItem('peretz-customer-auth-token')) {
+            router.push('/')
+        }
+    }, [])
+
+
     const router = useRouter()
     const [Loading, setLoading] = useState(false);
     const [email, setEmail] = useState('')
@@ -42,7 +50,7 @@ export default () => {
     return (
         <div>
             {/* Loading Wheel */}
-            <div className={`double-up fixed w-screen h-screen ${Loading ? 'flex' : 'hidden'} justify-center items-center bg-[#ffffff3b]`} style={{ display: !Loading && "none" }}></div>
+            <div className={`double-up fixed w-screen h-screen ${Loading ? 'flex' : 'hidden'} justify-center items-center bg-[#ffffff3b]`}></div>
 
             {/* Create login form with tailwind css */}
             <div className="flex flex-col items-center justify-center h-screen">

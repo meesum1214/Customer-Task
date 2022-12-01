@@ -45,7 +45,7 @@ export default () => {
     return (
         <div>
             {/* Loading Wheel */}
-            <div className={`double-up fixed w-screen h-screen z-50 ${Loading ? 'flex' : 'hidden'} justify-center items-center bg-[#ffffff3b]`} style={{ display: !Loading && "none" }}></div>
+            <div className={`double-up fixed w-screen h-screen z-50 ${Loading ? 'flex' : 'hidden'} justify-center items-center bg-[#ffffff3b]`}></div>
 
             <NavBar />
 

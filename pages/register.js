@@ -22,6 +22,11 @@ export default () => {
     const [totalPhone, setTotalPhone] = useState([{ phone: '' }])
 
     useEffect(() => {
+        if (localStorage.getItem('peretz-customer-auth-token')) {
+            router.push('/')
+        }
+        return
+
         getUsers(setAllUsers)
         getWorkers(setAllWorkers)
         getCustomers(setAllCustomers)
@@ -262,7 +267,7 @@ export default () => {
         <div>
 
             {/* Loading Wheel */}
-            <div className={`z-10 double-up fixed w-screen h-screen ${Loading ? 'flex' : 'hidden'} justify-center items-center bg-[#ffffff3b]`} style={{ display: !Loading && "none" }}></div>
+            <div className={`z-10 double-up fixed w-screen h-screen ${Loading ? 'flex' : 'hidden'} justify-center items-center bg-[#ffffff3b]`}></div>
 
             <div className="z-0 flex flex-col items-center justify-center h-[170vh]">
                 <div className="text-white text-5xl font-bold flex justify-center mb-10">Customer Panel</div>
