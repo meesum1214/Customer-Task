@@ -36,12 +36,14 @@ export default function Home() {
             boards ?
               boards.map((board, index) => {
                 return (
-                  <div className="w-52 h-7 bg-[#161B22] flex justify-around items-center rounded-md mt-4 border border-gray-400" key={index}>
-                    <div className="text-sm text-gray-200 font-bold">{board.boardName}</div>
-                    <div
-                      className="text-sm text-gray-500 font-bold cursor-pointer hover:text-white transition-all"
-                      onClick={() => router.push(`/${board.boardName}`)}
-                    >View</div>
+                  <div className="text-white font-semibold w-52 h-32 bg-[#161B22] flex flex-col justify-center rounded-md mt-4 px-3 border border-gray-400 cursor-pointer" key={index}
+                    onClick={() => router.push(`/${board.boardName}`)}
+                  >
+                    <div>
+                      <div className="text-sm">Board Name: {board.boardName}</div>
+                      <div className="text-sm my-2">Customer: {board.customer}</div>
+                      <div className="text-sm">Project Amount: <span className="text-green-500">${board.boardPrice}</span> </div>
+                    </div>
                   </div>
                 )
               })

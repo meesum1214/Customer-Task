@@ -29,7 +29,7 @@ export default ({ setLoading }) => {
     });
 
     useEffect(() => {
-        getUserData(localStorage.getItem('peretz-worker-user-id'), setUserData)
+        getUserData(localStorage.getItem('peretz-customer-user-id'), setUserData)
     }, [])
 
 
@@ -145,12 +145,12 @@ export default ({ setLoading }) => {
                         <div className="mt-2 text-lg font-semibold">{userData.fName} {userData.lName}</div>
                         <div className="flex items-center mt-2">
                             <div
-                                className="text-sm h-10 flex justify-center items-center px-4 py-2 leading-none border rounded bg-gray-800 text-white hover:border-black hover:border-transparent hover:text-black hover:bg-white ml-1 cursor-pointer transition-all"
+                                className="text-sm h-10 flex justify-center items-center px-4 py-2 leading-none border rounded bg-gray-800 text-white hover:border hover:border-black hover:text-black hover:bg-white ml-1 cursor-pointer transition-all"
                                 onClick={() => setOpened(true)}
                             >Add Image</div>
 
                             <div
-                                className="text-sm h-10 flex justify-center items-center px-4 py-2 leading-none border rounded bg-gray-800 text-white hover:border-black hover:border-transparent hover:text-black hover:bg-white ml-1 cursor-pointer transition-all"
+                                className="text-sm h-10 flex justify-center items-center px-4 py-2 leading-none border rounded bg-gray-800 text-white hover:border hover:border-black hover:text-black hover:bg-white ml-1 cursor-pointer transition-all"
                                 onClick={onLogout}
                             >Logout</div>
                         </div>
@@ -182,11 +182,8 @@ export default ({ setLoading }) => {
                         </Dropzone>
 
                         <div
-                            className="text-sm h-10 flex justify-center items-center px-4 py-2 leading-none border rounded bg-gray-800 text-white hover:border-black hover:border-transparent hover:text-black hover:bg-white ml-1 cursor-pointer transition-all"
+                            className="text-sm h-10 flex justify-center items-center px-4 py-2 leading-none border rounded bg-gray-800 text-white hover:border-black hover:border hover:text-black hover:bg-white ml-1 cursor-pointer transition-all"
                             onClick={uploadImage}
-                        // onClick={() => {
-                        //     uploadProfileImage(userData.id, file[0])
-                        // }}
                         >Upload</div>
                     </div>
 

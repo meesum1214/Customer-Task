@@ -262,9 +262,9 @@ export default () => {
         <div>
 
             {/* Loading Wheel */}
-            <div className={`double-up fixed w-screen h-screen ${Loading ? 'flex' : 'hidden'} justify-center items-center bg-[#ffffff3b]`} style={{ display: !Loading && "none" }}></div>
+            <div className={`z-10 double-up fixed w-screen h-screen ${Loading ? 'flex' : 'hidden'} justify-center items-center bg-[#ffffff3b]`} style={{ display: !Loading && "none" }}></div>
 
-            <div className="flex flex-col items-center justify-center h-screen">
+            <div className="z-0 flex flex-col items-center justify-center h-[170vh]">
                 <div className="text-white text-5xl font-bold flex justify-center mb-10">Customer Panel</div>
                 <div className="w-full max-w-md">
                     <div className="flex justify-between items-center w-full px-12 h-[60px] bg-[#242731] rounded-sm rounded-b-none">
